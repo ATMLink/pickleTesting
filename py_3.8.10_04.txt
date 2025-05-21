@@ -1,0 +1,54 @@
+Python version: 3.8.10 (tags/v3.8.10:3d8993a, May  3 2021, 11:48:03) [MSC v.1928 64 bit (AMD64)]
+Test time: 2025-05-22 00:10:28.857238
+=== Pickle Test Output ===
+
+Input: 42
+Original object hash: 73475cb40a568e8da8a045ced110137e159f890ac4da883b6b17dc651b3a8049
+Deserialized object hash: 73475cb40a568e8da8a045ced110137e159f890ac4da883b6b17dc651b3a8049
+Match: True
+
+Input: 1267650600228229401496703205376
+Original object hash: 5ee7924f903dfefa9253b5f63147f53433516da9daf01f6e729331dcf31b28c6
+Deserialized object hash: 5ee7924f903dfefa9253b5f63147f53433516da9daf01f6e729331dcf31b28c6
+Match: True
+
+Input: 3.14159
+Original object hash: c0740dd25c9de39b9c8d5ab452e8b69bcc0bf86f2a60ed7e527e79d0a3035852
+Deserialized object hash: c0740dd25c9de39b9c8d5ab452e8b69bcc0bf86f2a60ed7e527e79d0a3035852
+Match: True
+
+Input: hello
+Original object hash: 2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824
+Deserialized object hash: 2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824
+Match: True
+
+Input: b'hello'
+Original object hash: 1ff632a611885373673516162c18b64c8c57ac5b1a3e60c0a3facba0e7645a31
+Deserialized object hash: 1ff632a611885373673516162c18b64c8c57ac5b1a3e60c0a3facba0e7645a31
+Match: True
+
+Input: [1, 2, 3]
+Original object hash: a36b1f2c3f84522dd1005145646617d7054c0851e97c72a039c0bdfac9fa07f3
+Deserialized object hash: a36b1f2c3f84522dd1005145646617d7054c0851e97c72a039c0bdfac9fa07f3
+Match: True
+
+Input: {'a': 1, 'b': 2}
+Original object hash: 3dffaea891e5dbadb390da33bad65f509dd667779330e2720df8165a253462b8
+Deserialized object hash: 3dffaea891e5dbadb390da33bad65f509dd667779330e2720df8165a253462b8
+Match: True
+
+Input: (1, 2)
+Original object hash: cf4dabed2ce0f4fc293425d4063a8c54df5e1164a6d4a6d85712e0f491ea08c8
+Deserialized object hash: cf4dabed2ce0f4fc293425d4063a8c54df5e1164a6d4a6d85712e0f491ea08c8
+Match: True
+
+Input: {1, 2, 3}
+Original object hash: 8298d0492354e620262b63e1d84fb85e1b3d9df71672a4894441a5ee30b08c0c
+Deserialized object hash: 8298d0492354e620262b63e1d84fb85e1b3d9df71672a4894441a5ee30b08c0c
+Match: True
+
+Input: <test_input_regular.CustomObject object at 0x000001ADFB90DB50>
+Original object hash: bc40b514a5b14834b8bbd7f7d00bbaf853c42aab6e3194c176743408610006b5
+Deserialized object hash: 0c9ed948bcd69b5ed5c87a056d6d3fb9e6408a101bcc9db121aa4d46af930eef
+Match: False
+
