@@ -70,26 +70,98 @@ class PickleCompatibilityTest(unittest.TestCase):
 
     def test_boundary_data(self):
         """测试边界数据和超边界数据的序列化和反序列化，并进行统计分析."""
+
+        # 整数边界
+        int_min = -(2**63)
+        int_max = 2**63 - 1
+
+        # 字符串边界
+        empty_string = ""
+        short_string = "a"
+        long_string = "a" * (2**10)  # 1KB
+        very_long_string = "a" * (2**16) # 64KB
+
+        # 列表边界
+        empty_list = []
+        short_list = [1]
+        long_list = list(range(2**8)) # 256
+        very_long_list = list(range(2**10)) # 1024
+
+        # 字典边界
+        empty_dict = {}
+        short_dict = {1: "a"}
+        long_dict = {i: str(i) for i in range(2**8)} # 256
+        very_long_dict = {i: str(i) for i in range(2**10)} # 1024
+
+        # 元组边界
+        empty_tuple = ()
+        short_tuple = (1,)
+        long_tuple = tuple(range(2**8)) # 256
+        very_long_tuple = tuple(range(2**10)) # 1024
+
+        # 浮点数边界
+        float_min = -1e300
+        float_max = 1e300
+        float_zero = 0.0
+        float_one = 1.0
+        float_neg_one = -1.0
+        float_nan = float('nan')
+        float_inf = float('inf')
+        float_neg_inf = float('-inf')
+
         test_data = [
+            # 整数边界
             0,
             1,
             -1,
-            2**63 - 1,  # sys.maxsize
-            -(2**63),  # -sys.maxsize - 1
-            float('inf'),
-            float('-inf'),
-            float('nan'),
-            1e300,  # 接近浮点数上限
-            -1e300,
-            2**1000,  # 超出普通整数范围的大整数
-            -(2**1000),
-            b"a" * 2**16, # large bytes
-            "a" * 2**16,  # large string
-            [1] * 2**10, # large list
-            {i:i for i in range(2**8)}, # large dict
-            (1,) * 2**10,  # large tuple
-            set(range(2**8)), # large set
-            frozenset(range(2**8)) # large frozenset
+            int_min,
+            int_max,
+            int_min + 1,
+            int_max - 1,
+            int_min - 1, #超出范围
+            int_max + 1,  #超出范围
+
+            # 字符串边界
+            empty_string,
+            short_string,
+            long_string,
+            very_long_string,
+
+            # 列表边界
+            empty_list,
+            short_list,
+            long_list,
+            very_long_list,
+
+            # 字典边界
+            empty_dict,
+            short_dict,
+            long_dict,
+            very_long_dict,
+
+            # 元组边界
+            empty_tuple,
+            short_tuple,
+            long_tuple,
+            very_long_tuple,
+
+             # 浮点数边界
+            float_min,
+            float_max,
+            float_zero,
+            float_one,
+            float_neg_one,
+            float_nan,
+            float_inf,
+            float_neg_inf,
+            1e-300, # 接近0的浮点数
+            -1e-300,
+
+            # 集合边界
+            set(),
+            {1},
+            frozenset(),
+            frozenset({1}),
         ]
 
         results = {}  # 存储每个测试数据的哈希值和状态
