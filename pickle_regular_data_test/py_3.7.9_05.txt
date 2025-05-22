@@ -1,10 +1,38 @@
 Python version: 3.7.9 (tags/v3.7.9:13c94747c7, Aug 17 2020, 18:58:18) [MSC v.1900 64 bit (AMD64)]
-Test time: 2025-05-22 00:11:46.230459
+Test time: 2025-05-22 13:51:43.526820
 === Pickle Test Output ===
+
+[Stability Skipped] Input: <module 'sys' (built-in)>
+Reason: TypeError: can't pickle module objects
+
+Input: None
+Original object hash: dc937b59892604f5a86ac96936cd7ff09e25f18ae6b758e8014a24c7fa039e91
+Deserialized object hash: dc937b59892604f5a86ac96936cd7ff09e25f18ae6b758e8014a24c7fa039e91
+Match: True
+
+Input: True
+Original object hash: 3cbc87c7681f34db4617feaa2c8801931bc5e42d8d0f560e756dd4cd92885f18
+Deserialized object hash: 3cbc87c7681f34db4617feaa2c8801931bc5e42d8d0f560e756dd4cd92885f18
+Match: True
+
+Input: False
+Original object hash: 60a33e6cf5151f2d52eddae9685cfa270426aa89d8dbc7dfb854606f1d1a40fe
+Deserialized object hash: 60a33e6cf5151f2d52eddae9685cfa270426aa89d8dbc7dfb854606f1d1a40fe
+Match: True
+
+Input: 0
+Original object hash: 5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9
+Deserialized object hash: 5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9
+Match: True
 
 Input: 42
 Original object hash: 73475cb40a568e8da8a045ced110137e159f890ac4da883b6b17dc651b3a8049
 Deserialized object hash: 73475cb40a568e8da8a045ced110137e159f890ac4da883b6b17dc651b3a8049
+Match: True
+
+Input: -1
+Original object hash: 1bad6b8cf97131fceab8543e81f7757195fbb1d36b376ee994ad1cf17699c464
+Deserialized object hash: 1bad6b8cf97131fceab8543e81f7757195fbb1d36b376ee994ad1cf17699c464
 Match: True
 
 Input: 1267650600228229401496703205376
@@ -17,9 +45,34 @@ Original object hash: c0740dd25c9de39b9c8d5ab452e8b69bcc0bf86f2a60ed7e527e79d0a3
 Deserialized object hash: c0740dd25c9de39b9c8d5ab452e8b69bcc0bf86f2a60ed7e527e79d0a3035852
 Match: True
 
-Input: hello
+Input: -0.1
+Original object hash: ffe616e28103a848cc8a18531f5ba096e153b50c6d597297ad5cb69e39496f6a
+Deserialized object hash: ffe616e28103a848cc8a18531f5ba096e153b50c6d597297ad5cb69e39496f6a
+Match: True
+
+Input: (3+4j)
+Original object hash: 0605bc20f475d3900c66dfac746c30f584799d46018e34632c65c80eff8dc230
+Deserialized object hash: 0605bc20f475d3900c66dfac746c30f584799d46018e34632c65c80eff8dc230
+Match: True
+
+Input: ''
+Original object hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+Deserialized object hash: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+Match: True
+
+Input: 'hello'
 Original object hash: 2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824
 Deserialized object hash: 2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824
+Match: True
+
+Input: '你好'
+Original object hash: 670d9743542cae3ea7ebe36af56bd53648b0a1126162e78d81a32934a711302e
+Deserialized object hash: 670d9743542cae3ea7ebe36af56bd53648b0a1126162e78d81a32934a711302e
+Match: True
+
+Input: '😊'
+Original object hash: 08081c499cdeab015ad5c888c4aac3e8a4ba2333be9862f69482732bd817411d
+Deserialized object hash: 08081c499cdeab015ad5c888c4aac3e8a4ba2333be9862f69482732bd817411d
 Match: True
 
 Input: b'hello'
@@ -27,14 +80,39 @@ Original object hash: 1ff632a611885373673516162c18b64c8c57ac5b1a3e60c0a3facba0e7
 Deserialized object hash: 1ff632a611885373673516162c18b64c8c57ac5b1a3e60c0a3facba0e7645a31
 Match: True
 
+Input: bytearray(b'world')
+Original object hash: fac0a50b5e9464e6808333cf66462b7e40972327857e8cff350d7f31455d21d9
+Deserialized object hash: fac0a50b5e9464e6808333cf66462b7e40972327857e8cff350d7f31455d21d9
+Match: True
+
+Input: []
+Original object hash: 4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945
+Deserialized object hash: 4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945
+Match: True
+
 Input: [1, 2, 3]
 Original object hash: a36b1f2c3f84522dd1005145646617d7054c0851e97c72a039c0bdfac9fa07f3
 Deserialized object hash: a36b1f2c3f84522dd1005145646617d7054c0851e97c72a039c0bdfac9fa07f3
 Match: True
 
-Input: {'a': 1, 'b': 2}
-Original object hash: 3dffaea891e5dbadb390da33bad65f509dd667779330e2720df8165a253462b8
-Deserialized object hash: 3dffaea891e5dbadb390da33bad65f509dd667779330e2720df8165a253462b8
+Input: [1, [2, 3]]
+Original object hash: 229436ac15ba0ae13300e4a060376fb85ef50a8480f0181cb05318252e881d1e
+Deserialized object hash: 229436ac15ba0ae13300e4a060376fb85ef50a8480f0181cb05318252e881d1e
+Match: True
+
+Input: [1, 'a', None]
+Original object hash: 8df07d8b778e08c48ee61be464b4d3d83e384bc5e8fa16f15fb893dc8a029821
+Deserialized object hash: 8df07d8b778e08c48ee61be464b4d3d83e384bc5e8fa16f15fb893dc8a029821
+Match: True
+
+Input: ()
+Original object hash: 2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d
+Deserialized object hash: 2e38e77b22c314a449e91fafed92a43826ac6aa403ae6a8acb6cf58239fbaf5d
+Match: True
+
+Input: (1,)
+Original object hash: 28cb03b06c288e88c6a880eeba293bf9c9bb9fa586128586459a486a511f832f
+Deserialized object hash: 28cb03b06c288e88c6a880eeba293bf9c9bb9fa586128586459a486a511f832f
 Match: True
 
 Input: (1, 2)
@@ -42,13 +120,66 @@ Original object hash: cf4dabed2ce0f4fc293425d4063a8c54df5e1164a6d4a6d85712e0f491
 Deserialized object hash: cf4dabed2ce0f4fc293425d4063a8c54df5e1164a6d4a6d85712e0f491ea08c8
 Match: True
 
+Input: (1, 'a', None)
+Original object hash: 06d8949c738d66d0ba58a20471beb4850e7d102027540c8abdf64a098375f3de
+Deserialized object hash: 06d8949c738d66d0ba58a20471beb4850e7d102027540c8abdf64a098375f3de
+Match: True
+
+Input: {}
+Original object hash: 44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a
+Deserialized object hash: 44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a
+Match: True
+
+Input: {'a': 1, 'b': {'c': 2}}
+Original object hash: b604be63e8d8fad37d56b8730e44acfca1bfc2d330ccf15eaf2f5bd79db1c0c4
+Deserialized object hash: b604be63e8d8fad37d56b8730e44acfca1bfc2d330ccf15eaf2f5bd79db1c0c4
+Match: True
+
+Input: set()
+Original object hash: 513b0cfc87b24ef3735d86c2dd23127debe92aad9ce8844ad443665f7d5db85e
+Deserialized object hash: 513b0cfc87b24ef3735d86c2dd23127debe92aad9ce8844ad443665f7d5db85e
+Match: True
+
 Input: {1, 2, 3}
 Original object hash: 8298d0492354e620262b63e1d84fb85e1b3d9df71672a4894441a5ee30b08c0c
 Deserialized object hash: 8298d0492354e620262b63e1d84fb85e1b3d9df71672a4894441a5ee30b08c0c
 Match: True
 
-Input: <test_input_regular.CustomObject object at 0x0000024975AF5048>
-Original object hash: df898811bd99359c76a282499e4f2368c7e0b7b1e3069515ea64652330d56886
-Deserialized object hash: c0d23f7ec62e595b4ee1fbe5e9442d0ff5c327244d03072d8508e901f195ea4b
+Input: frozenset({4, 5})
+Original object hash: 49571799297ac0d07acab82c77a67268faf70aee0beacb74f8a769c2dc53bf2f
+Deserialized object hash: 49571799297ac0d07acab82c77a67268faf70aee0beacb74f8a769c2dc53bf2f
+Match: True
+
+Input: <test_input_regular.CustomObject object at 0x000001E881A32DC8>
+Original object hash: 077ff2390d8dc6e8cbe96458c440ef8163c0122aea6acab1a13fe03102f24126
+Deserialized object hash: 40a6be2a6fad22394dbe1c0575233d0691f4269e92068cac5dbc1a832b50a995
 Match: False
+
+Input: <test_input_regular.CustomGetState object at 0x000001E881A32808>
+Original object hash: 2fc70aff5d11f2ef833450d6683311b957082460f41aa952f097443e0402df3d
+Deserialized object hash: b5e447c4e753fe8bc54edbf2e4c570561282f7ba529fb8e8589bcdaead88e3dd
+Match: False
+
+Input: ValueError('Test error')
+Original object hash: a4da4808bf83bc1b6c44c148553f8d8c803cbcc47272bd429c208a248ec553d5
+Deserialized object hash: a4da4808bf83bc1b6c44c148553f8d8c803cbcc47272bd429c208a248ec553d5
+Match: True
+
+Input: Ellipsis
+Original object hash: 4637e99b28a1ce112e8f4009dbf144f3a75a04d3e4b0c30b084aef21c5e3cfe6
+Deserialized object hash: 4637e99b28a1ce112e8f4009dbf144f3a75a04d3e4b0c30b084aef21c5e3cfe6
+Match: True
+
+Input: NotImplemented
+Original object hash: 8d2d9b6c87801c98f52346e8b2acd56a2d9e7828df07c167bdfe2acc98b6a76a
+Deserialized object hash: 8d2d9b6c87801c98f52346e8b2acd56a2d9e7828df07c167bdfe2acc98b6a76a
+Match: True
+
+Input: <function dummy_function at 0x000001E881B32D38>
+Original object hash: fdc3035ba7467c7e3613e4c05797c212a63195244b0d6825fd7ea01815e6579b
+Deserialized object hash: fdc3035ba7467c7e3613e4c05797c212a63195244b0d6825fd7ea01815e6579b
+Match: True
+
+[Correctness Skipped] Input: <module 'sys' (built-in)>
+Reason: TypeError: can't pickle module objects
 
