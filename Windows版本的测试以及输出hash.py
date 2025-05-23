@@ -48,7 +48,6 @@ class CustomObject:
             frozenset(['a', 'b']): (3, 4)
         }
 
-# 为了稳定性，你可选地设置 PYTHONHASHSEED
 # os.environ['PYTHONHASHSEED'] = '42'
 show_pickle_hash("Case 6: frozenset dict key", CustomObject())
 
